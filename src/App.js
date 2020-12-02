@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React, {useState} from 'react';
+import CityDisplay from './CityDisplay';
 
 function App() {
+  const [city] = useState('London');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>React Hooks</h2>
+  <h2>I love {city}</h2>
+  <CityDisplay  cityName={city}/>
     </div>
   );
 }
